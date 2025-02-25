@@ -1,4 +1,1 @@
-/*!***************************************************************************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/public/hakkimizda.scss ***!
-  \***************************************************************************************************************************************************************/
 .vizyon-bg{background-color:var(--thm-color)}.misyon-bg{background-color:var(--thm-color-dark)}.clip-1{clip-path:polygon(0 0,30% 0,0 50%)}.clip-1,.clip-2{transition:all .5sease}.clip-2{clip-path:polygon(100% 50%,100% 100%,70% 100%)}.misyon-bg,.vizyon-bg{height:100%;left:0;position:absolute;top:0;width:100%;z-index:-1}

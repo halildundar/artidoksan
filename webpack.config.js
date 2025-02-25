@@ -8,17 +8,7 @@ import { config } from "dotenv";
 config({path:"./src/const.env"});
 console.log(process.env.NODE_ENV);
 
-const mapFilenamesToEntries = (pattern) =>
-  glob.sync(pattern).reduce((entries, filename) => {
-    let [, name] = filename.match(/([^/]+)\.(js)$/);
-    name = name.replace("src\\", "");
-    // filename = filename.replace('src\\','')
-    return { ...entries, [name]: resolve(process.cwd(), filename) };
-  }, {});
 
-console.log(mapFilenamesToEntries("./src/**/*.@(js)"));
-console.log(process.env.NODE_ENV)
-const entries = mapFilenamesToEntries("./src/**/*.@(js)");
 export default {
   // mode: "development",
   mode:process.env.NODE_ENV,

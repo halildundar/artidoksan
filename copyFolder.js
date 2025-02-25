@@ -14,7 +14,7 @@ if(process.env.NODE_ENV !== 'production'){
 }else{
     delete data.devDependencies;
     delete data.scripts.serve;
-    unlinkSync(resolve(process.cwd(),"dist/viewschanges.js"))
+    // unlinkSync(resolve(process.cwd(),"dist/viewschanges.js"))
 }
 
 
