@@ -1,0 +1,27 @@
+
+.vizyon-bg{
+    background-color: var(--thm-color);
+}
+
+.misyon-bg{
+    background-color: var(--thm-color-dark);
+}
+
+.clip-1{
+    clip-path: polygon(0 0, 30% 0, 0 50%);
+    transition: all .5sease;
+}
+.clip-2 {
+    clip-path: polygon(100% 50%, 100% 100%, 70% 100%);
+    transition: all .5sease;
+}
+
+.misyon-bg, .vizyon-bg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+

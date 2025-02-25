@@ -1,0 +1,78 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import "./util/spinner.scss";
+@import "./util/icons.scss";
+@import "./util/fonts.scss";
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  --max-width: 1400px;
+  --thm-color: #0287e5;
+  --thm-color-dark: #005fa3;
+  --bg-color: #ebebeb;
+  font-family: "Inter", "arial";
+  font-size: 16px;
+  margin: 0;
+  background-color: #ebebeb;
+  color: white;
+}
+
+h1, .h1 {
+  font-size: 300%;
+  font-weight: 900;
+  color: var(--thm-color);
+}
+h2, .h2 {
+  font-size: 250%;
+  font-weight: 700;
+  color: var(--thm-color);
+}
+h3, .h3 {
+  font-size: 200%;
+  font-weight: 600;
+}
+h4, .h4 {
+  font-size: 150%;
+  font-weight: 500;
+  margin-top: 1.4rem;
+}
+
+p{
+  @apply indent-[2.4rem] pb-4;
+}
+input,textarea{
+  outline: none;
+}
+.form-label{
+  @apply block mb-2 text-sm  text-gray-900 dark:text-white font-semibold;
+}
+.form-text{
+  @apply bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500;
+}
+.btn-blue{
+  @apply text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800
+}
+header {
+  // position: fixed;
+  // left: 0;
+  // top: 0;
+  // width: 100%;
+  border-bottom:2px solid var(--thm-color);
+  background-image: linear-gradient(
+    to bottom,
+    #ebebeb, #ebebebf1, #ebebeb64,
+    transparent
+  );
+  z-index: 99;
+}
+
+.btn-arti{
+  @apply relative overflow-hidden inline-block duration-100  px-4 py-2 rounded text-center  text-white
+}
+
+.btn-arti.btn-thm-color{
+  @apply bg-[--thm-color] text-white hover:bg-[--thm-color-dark]
+}

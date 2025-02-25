@@ -1,0 +1,169 @@
+.deneme {
+  background-image: url(./assets/logo.webp);
+  background-image: url(./assets/sm/banner1.webp);
+  background-image: url(./assets/md/banner1.webp);
+  background-image: url(./assets/lg/banner1.webp);
+  background-image: url(./assets/xl/banner1.webp);
+  background-image: url(./assets/2xl/banner1.webp);
+  background-image: url(./assets/sm/banner2.webp);
+  background-image: url(./assets/md/banner2.webp);
+  background-image: url(./assets/lg/banner2.webp);
+  background-image: url(./assets/xl/banner2.webp);
+  background-image: url(./assets/2xl/banner2.webp);
+  background-image: url(./assets/sm/banner3.webp);
+  background-image: url(./assets/md/banner3.webp);
+  background-image: url(./assets/lg/banner3.webp);
+  background-image: url(./assets/xl/banner3.webp);
+  background-image: url(./assets/2xl/banner3.webp);
+  background-image: url(./assets/lg/hizmet1.webp);
+  background-image: url(./assets/lg/hizmet2.webp);
+  background-image: url(./assets/lg/hizmet3.webp);
+  background-image: url(./assets/lg/hizmet4.webp);
+  background-image: url(./assets/seo-section-home.webp);
+  background-image: url(./assets/main-hiz1.webp);
+  background-image: url(./assets/modulG.webp);
+  background-image: url(./assets/modulB.webp);
+  background-image: url(./assets/modulE.webp);
+  background-image: url(./assets/modulH1.webp);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+h1,
+h2 {
+  padding: 20px 0 10px 0;
+}
+h1 {
+  font-size: 2rem;
+}
+h2 {
+  font-size: 1.6rem;
+}
+.icerik ul {
+  padding: 0 0 0 1.4rem;
+  list-style-type: disc;
+  li {
+    text-decoration: italic;
+    font-size: 0.9rem;
+  }
+}
+
+.homebanner {
+  position: relative;
+  min-height: 400px;
+}
+.homebanner .home-banner-slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 400px;
+  display: block;
+  .banner-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(120deg,#ebebeb 25%,#ebebebbd 50%,transparent,transparent,transparent,transparent,transparent);
+    z-index: 1;
+  }
+  .banner-text-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    color: white;
+    text-align: start;
+    h1 {
+      font-size: 2.5rem;
+    }
+    h2 {
+      font-size: 1.5rem;
+    }
+  }
+  
+  
+}
+.homebanner{
+  
+  .bshow {
+    z-index: 20;
+    .bimg1,.btext3,.btn-arti{
+      opacity: 1;
+      filter:blur(0);
+      transition: all 1s;
+    }
+    .btext1{
+      transform: translateY();
+      opacity: 1;
+      filter:blur(0);
+      transition: all 1s;
+    }
+    .btext2{
+      transform: translateX(0);
+      opacity: 1;
+      filter:blur(0);
+      transition: all 1s;
+    }
+  }
+  .bhide {
+    .bimg1,.btext3,.btn-arti{
+      opacity: 0;
+      filter:blur(10px);
+      transition: all 1s;
+    }
+    .btext1{
+      transform: translateY(-50%);
+      opacity: 0;
+      filter:blur(10px);
+      transition: all 1s;
+    }
+    .btext2{
+      transform: translateX(-20%);
+      opacity: 0;
+      filter:blur(10px);
+      transition: all 1s;
+    }
+  }
+}
+
+
+.homebanner .btn-wrapper{
+  z-index: 20;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: 10px 0;
+  width: 100%;
+  .pn-arrows{
+    margin-right: 10px;
+    .prev-arrow,.next-arrow{
+      @apply  p-2 cursor-pointer  border border-[--thm-color] hover:bg-white duration-100 bg-white/70 flex items-center justify-center
+    }
+    
+  }
+}
+
+.cont2-btns{
+  button{
+    @apply text-start shadow-sm rounded-l-xl shadow-indigo-900 rounded-r-full bg-[whitesmoke];
+  }
+  button.active > div {
+    @apply text-white 
+    
+  }
+  button.active > span {
+    @apply bg-[orange] text-white 
+  }
+  button.active{
+    @apply bg-blue-600 rounded-r-full
+    
+  }
+}
+.cont2-ban{
+
+}

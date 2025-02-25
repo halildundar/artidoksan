@@ -1,0 +1,269 @@
+{{> header}}
+{{!-- Home Banner --}}
+<div class="homebanner">
+    {{!-- Banners --}}
+    <div class="home-banner-slide bshow">
+        <picture>
+            <source srcset="/assets/sm/banner3.webp" media="(max-width: 640px)" />
+            <source srcset="/assets/md/banner3.webp" media="(min-width: 768px)" />
+            <source srcset="/assets/lg/banner3.webp" media="(min-width: 1024px)" />
+            <source srcset="/assets/xl/banner3.webp" media="(min-width: 1280px)" />
+            <source srcset="/assets/2xl/banner3.webp" media="(min-width: 1536px)" />
+            <img src="/assets/lg/banner3.webp" class="w-full h-full bimg1" alt="AVM asansörü resmi" />
+        </picture>
+        <div class="banner-overlay hidden lg:block"></div>
+        <div class="banner-text-wrapper">
+            <div
+                class="max-w-[--max-width]  px-5 py-3 mx-auto h-full w-full flex flex-col justify-center lg:justify-end pb-10">
+                <h2 class="lg:text-2xl font-bold text-gray-600 btext1">Asansör Teknik Hizmetler için</h2>
+                <h1 class="lg:text-4xl font-bold text-[--thm-color] pt-2 btext2">CE Belgelendirme</h1>
+                <p class="hidden lg:block text-gray-600 max-w-[50%] btext3">Lorem ipsum dolor sit amet, consectetur
+                    adipisicing elit.
+                    Quisquam,
+                    voluptates.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam,
+                    voluptates.
+                </p>
+                <div class="py-4">
+                    <a href="/" class="btn-arti btn-thm-color">Hemen Başvur</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="home-banner-slide bhide">
+        <picture>
+            <source srcset="/assets/sm/banner1.webp" media="(max-width: 640px)" />
+            <source srcset="/assets/md/banner1.webp" media="(min-width: 768px)" />
+            <source srcset="/assets/lg/banner1.webp" media="(min-width: 1024px)" />
+            <source srcset="/assets/xl/banner1.webp" media="(min-width: 1280px)" />
+            <source srcset="/assets/2xl/banner1.webp" media="(min-width: 1536px)" />
+            <img src="/assets/lg/banner1.webp" class="w-full h-full bimg1" alt="Asansör buttonları görseli" />
+        </picture>
+        <div class="banner-overlay hidden lg:block"></div>
+        <div class="banner-text-wrapper">
+            <div
+                class="max-w-[--max-width]  px-5 py-3 mx-auto h-full w-full flex flex-col lg:justify-end justify-center pb-10">
+                <h2 class="lg:text-2xl font-bold text-gray-600 btext1">Asansör Teknik Hizmetler için</h2>
+                <h1 class="lg:text-4xl font-bold text-[--thm-color] pt-2 btext2">CE Belgelendirme</h1>
+                <p class="hidden lg:block text-gray-600 max-w-[50%] btext3">Lorem ipsum dolor sit amet, consectetur
+                    adipisicing elit.
+                    Quisquam,
+                    voluptates.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam,
+                    voluptates.
+                </p>
+                <div class="py-4">
+                    <a href="/" class="btn-arti btn-thm-color">Hemen Başvur</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="home-banner-slide bhide">
+        <picture>
+            <source srcset="/assets/sm/banner2.webp" media="(max-width: 640px)" />
+            <source srcset="/assets/md/banner2.webp" media="(min-width: 768px)" />
+            <source srcset="/assets/lg/banner2.webp" media="(min-width: 1024px)" />
+            <source srcset="/assets/xl/banner2.webp" media="(min-width: 1280px)" />
+            <source srcset="/assets/2xl/banner2.webp" media="(min-width: 1536px)" />
+            <img src="/assets/lg/banner2.webp" class="w-full h-full bimg1" alt="AVM asansörü resmi" />
+        </picture>
+        <div class="banner-overlay hidden lg:block"></div>
+        <div class="banner-text-wrapper">
+            <div
+                class="max-w-[--max-width]  px-5 py-3 mx-auto h-full w-full flex flex-col justify-center lg:justify-end pb-10">
+                <h2 class="lg:text-2xl font-bold text-gray-600 btext1">Asansör Teknik Hizmetler için</h2>
+                <h1 class="lg:text-4xl font-bold text-[--thm-color] pt-2 btext2">CE Belgelendirme</h1>
+                <p class="hidden lg:block text-gray-600 max-w-[50%] btext3">Lorem ipsum dolor sit amet, consectetur
+                    adipisicing elit.
+                    Quisquam,
+                    voluptates.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam,
+                    voluptates.
+                </p>
+                <div class="py-4">
+                    <a href="/" class="btn-arti btn-thm-color">Hemen Başvur</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    {{!-- Next Prev button --}}
+    <div class="btn-wrapper">
+        <div class="max-w-[--max-width] mx-auto flex justify-end items-center">
+            <div class="pn-arrows ">
+                <div class="prev-arrow">
+                    <i class="tio text-[1.4rem] text-[--thm-color]">chevron_left</i>
+                </div>
+            </div>
+            <div class="pn-arrows ">
+                <div class="next-arrow">
+                    <i class="tio text-[1.4rem] text-[--thm-color]">chevron_right</i>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{{!-- Hizmetler menü --}}
+<div class="bg-white">
+    <div class="max-w-[--max-width] mx-auto py-12 pb-20 px-3 md:flex">
+        <div class="w-full  lg:w-1/4">
+            <h3 class="text-[--thm-color] font-bold text-lg text-center">CE Belgelendirme</h3>
+            <picture>
+                <img src="/assets/lg/hizmet1.webp" class="w-full h-auto " alt="erkek ve  kadın iş konuşuyor">
+            </picture>
+            <p class="text-center text-gray-600 md:line-clamp-2 lg:line-clamp-4 px-4 lg:px-10">2014/33/AB,EN 81-20/50,EN
+                81-70,EN 81-71,EN
+                81-72,EN 81-21,EN 81-28</p>
+        </div>
+
+        <div class="w-full  lg:w-1/4">
+            <h3 class="text-center text-[--thm-color] font-bold text-lg">Güncel Teknik Donanım</h3>
+            <picture>
+                <img src="/assets/lg/hizmet3.webp" class="w-full h-auto" alt="Dolap kapağı montajı">
+            </picture>
+            <p class="text-center px-4 lg:px-10 text-gray-600 md:line-clamp-2 lg:line-clamp-4">Lorem ipsum dolor
+                sitamet, consectetur adipisicing elit. Quisquam,
+                voluptates.</p>
+
+        </div>
+        <div class="w-full  lg:w-1/4">
+            <h3 class="text-center text-[--thm-color] font-bold text-lg">Asansör Son Kontrol</h3>
+            <picture>
+                <img src="/assets/lg/hizmet4.webp" class="w-full h-auto " alt="Denetim için araçtan inen iki kişi">
+            </picture>
+            <p class="text-center px-4 lg:px-10 text-gray-600 md:line-clamp-2 lg:line-clamp-4">14 Yıllık asansör denetim
+                tecrübelerimizle
+                devam eden birikimler ile 3.taraf gözetim denetim faliyetleri</p>
+        </div>
+        <div class="w-full  lg:w-1/4">
+            <h3 class="text-center text-[--thm-color] font-bold text-lg">Güncel Mevzuatlar</h3>
+            <picture>
+                <img src="/assets/lg/hizmet2.webp" class="w-full h-auto " alt="kağıt üzerinde cetvel ve kalem">
+            </picture>
+            <p class="text-center px-4 lg:px-10 text-gray-600 md:line-clamp-2 lg:line-clamp-4">2014/33/AB,EN 81-20/50,EN
+                81-70,EN 81-71,EN
+                81-72,EN 81-21,EN 81-28</p>
+
+        </div>
+    </div>
+</div>
+
+{{!-- Moduller Menü --}}
+<div>
+    <div class="max-w-[--max-width] mx-auto py-20 flex xl:flex-row flex-col">
+        <div class="xl:w-1/3 flex flex-col cont2-btns px-4 xl:px-0 xl:pb-0 pb-10">
+            <h1 class="text-[3rem] font-bold text-[--thm-color] leading-tight">
+                Asansör CE
+            </h1>
+            <h3 class="text-[2rem] text-[--thm-color] leading-tight">Belgelendirme</h3>
+            <div class="flex-1 flex flex-col  justify-evenly ">
+                <button 
+                    class="modulGBtn flex items-center justify-between pl-2 group hover:bg-blue-900 hover:rounded-r-full active ">
+                    <div class="text-[1.2rem] font-bold  text-gray-600 group-hover:text-white duration-100">
+                        Modul G <br>
+                        <div class="font-normal">(Ek VII Birim Doğrulama)</div>
+                    </div>
+                    <span
+                        class="tio text-[3rem] flex items-center justify-center bg-white text-gray-400  duration-100 border-[6px] border-gray-300  group-hover:bg-[orange] group-hover:text-white rounded-full  w-[4rem] h-[4rem]">chevron_right</span>
+                </button>
+                <button 
+                    class="modulBBtn flex items-center justify-between pl-2 group hover:bg-blue-900 hover:rounded-r-full ">
+                    <div class="text-[1.2rem] font-bold  text-gray-600 group-hover:text-white duration-100">
+                        Modul B <br>
+                        <div class="font-normal">(Ek IV Birim Doğrulama)</div>
+                    </div>
+                    <span
+                        class="tio text-[3rem] flex items-center justify-center bg-white text-gray-400  duration-100 border-[6px] border-gray-300  group-hover:bg-[orange] group-hover:text-white rounded-full  w-[4rem] h-[4rem]">chevron_right</span>
+                </button>
+                <button 
+                    class="modulEBtn flex items-center justify-between pl-2 group hover:bg-blue-900 hover:rounded-r-full ">
+                    <div class="text-[1.2rem] font-bold  text-gray-600 group-hover:text-white duration-100">
+                        Modul E <br>
+                        <div class="font-normal">(Ek X Birim Doğrulama)</div>
+                    </div>
+                    <span
+                        class="tio text-[3rem] flex items-center justify-center bg-white text-gray-400  duration-100 border-[6px] border-gray-300  group-hover:bg-[orange] group-hover:text-white rounded-full  w-[4rem] h-[4rem]">chevron_right</span>
+                </button>
+                <button 
+                    class="modulH1Btn flex items-center justify-between pl-2 group hover:bg-blue-900 hover:rounded-r-full ">
+                    <div class="text-[1.2rem] font-bold  text-gray-600 group-hover:text-white duration-100">
+                        Modul H1 <br>
+                        <div class="font-normal">(Ek XI Birim Doğrulama)</div>
+                    </div>
+                    <span
+                        class="tio text-[3rem] flex items-center justify-center bg-white text-gray-400  duration-100 border-[6px] border-gray-300  group-hover:bg-[orange] group-hover:text-white rounded-full  w-[4rem] h-[4rem]">chevron_right</span>
+                </button>
+            </div>
+        </div>
+        <div class="w-full xl:w-2/3 px-5 xl:px-0 xl:pl-10 ">
+            <div class="relative min-h-[250px] xl:min-h-[525px] cont2-bans">
+                <div class="modulGCls absolute top-0 left-0 w-full h-full  shadow-lg rounded-2xl overflow-hidden">
+                    <picture>
+                        <img src="/assets/modulG.webp" class="sepia-[100]" alt="Asansör denetimi eğitimi">
+                    </picture>
+                    <div class="absolute top-0 left-0 w-full h-full flex flex-col justify-end items-center pb-20  bg-gradient-to-b from-transparent via-[#00000055] to-black">
+                        <div class="text-[1.4rem] xl:text-[3rem] font-bold text-white drop-shadow-sm">Modul G</div>
+                        <div class="text-[1.2rem] xl:text-[2rem] text-white drop-shadow-sm">Ek VII Birim Doğrulama</div>
+                    </div>
+                </div>
+                <div class="modulBCls absolute top-0 left-0 w-full h-full  shadow-lg rounded-2xl overflow-hidden">
+                    <picture>
+                        <img src="/assets/modulB.webp" class="sepia-[100]" alt="Asansör bakımı">
+                    </picture>
+                    <div class="absolute top-0 left-0 w-full h-full flex flex-col justify-end items-center pb-20 bg-gradient-to-b from-transparent via-[#00000055] to-black">
+                        <div class="text-[1.4rem] xl:text-[3rem] font-bold text-white drop-shadow-sm">Modul B</div>
+                        <div class="text-[1.2rem] xl:text-[2rem] text-white drop-shadow-sm">Ek IV Birim Doğrulama</div>
+                    </div>
+                </div>
+                <div class="modulECls absolute top-0 left-0 w-full h-full  shadow-lg rounded-2xl overflow-hidden">
+                    <picture>
+                        <img src="/assets/modulE.webp" class="sepia-[100]" alt="Asansör montajı">
+                    </picture>
+                    <div class="absolute top-0 left-0 w-full h-full flex flex-col justify-end items-center pb-20 bg-gradient-to-b from-transparent via-[#00000055] to-black">
+                        <div class="text-[1.4rem] xl:text-[3rem] font-bold text-white drop-shadow-sm">Modul E</div>
+                        <div class="text-[1.2rem] xl:text-[2rem] text-white drop-shadow-sm">Ek X Birim Doğrulama</div>
+                    </div>
+                </div>
+                <div class="modulH1Cls absolute top-0 left-0 w-full h-full  shadow-lg rounded-2xl overflow-hidden">
+                    <picture>
+                        <img src="/assets/modulH1.webp" class="sepia-[100]" alt="Asansör montajı diğer bir açıdan">
+                    </picture>
+                    <div class="absolute top-0 left-0 w-full h-full flex flex-col justify-end items-center pb-20 bg-gradient-to-b from-transparent via-[#00000055] to-black">
+                        <div class="text-[1.4rem] xl:text-[3rem] font-bold text-white drop-shadow-sm">Modul H1</div>
+                        <div class="text-[1.2rem] xl:text-[2rem] text-white drop-shadow-sm">Ek XI Birim Doğrulama</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{{!-- Populer Area --}}
+<div>
+    <div class="max-w-[--max-width] mx-auto lg:flex ">
+        <div class="w-1/2">
+            <picture>
+                <img src="/assets/seo-section-home.webp" alt="">
+            </picture>
+        </div>
+        <div class="w-1/2 p-10">
+            <section class="bg-[#ebebeb] w-[120%] translate-x-[-20%] translate-y-[20%] p-10">
+                <div>
+                    <div class=" text-black">
+                        <span class="font-bold text-[5rem] text-[--thm-color]">Yeni Nesil</span> <br>
+                        <span class="text-[4rem] leading-4">Asansör Kontrolleri</span>
+                    </div>
+                    <p class="text-[2rem] text-gray-700 py-5">Türkiye'de apartman yöneticileri için güvenilir bir
+                        asansör
+                        onarım ve bakım hizmeti sağlayıcısı olmazsa olmazlardandır.</p>
+                    <p class="text-[1.2rem] text-gray-500">Asansörlerin durumları hakkında tarafsız,14
+                        yıllık deneyimli teknik denetçilerimizle hizmetinize raporlama yapıyoruz.Böylelikle hem asansör
+                        firmaları hem de bina yönetimlerini güvenli ve hızlı bir şekilde tüm süreçlerini işletmelerine
+                        olanak sağlanılmış oluyor.</p>
+                </div>
+            </section>
+        </div>
+    </div>
+</div>
+
+
+{{> footer}}
