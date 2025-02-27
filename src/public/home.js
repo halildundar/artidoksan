@@ -1,15 +1,6 @@
 import "./home.scss";
 $(document).ready(function () {
-  $(".tiopen").click(function (e) {
-    e.preventDefault();
-    console.log("Open");
-    $(".sidemenu").css("left", "30%");
-  });
-  $(".tioclose").click(function (e) {
-    e.preventDefault();
-    console.log("Close");
-    $(".sidemenu").css("left", "100%");
-  });
+ 
 
   console.log($(".home-banner-slide"));
   let banCurrInd = 0;

@@ -3,6 +3,7 @@ import {HomePage} from './pages/home.js';
 import { HakkimizdaPage } from "./pages/hakkimizda.js";
 import { ISO9001Page,ISO14001Page,ISO22000Page,ISO27001Page,ISO45001Page,ISO13485Page,ISO10002Page,ISO50001Page } from "./pages/sistem.js";
 import { LiftPage,MachineryPage } from "./pages/urun.js";
+import { AsansorCEPage,IkinciTarafDenetimPage,PeriyodikOlmayanPage } from "./pages/asansor.js";
 let router = express.Router({ mergeParams: true });
 import { SslStatus } from "./ssl.js";
 
@@ -21,6 +22,9 @@ export let appRoutes = (app) => {
   router.get("/urun-belgelendirme", (req,res)=>res.redirect('/urun-belgelendirme/lift'));
   router.get("/urun-belgelendirme/lift", LiftPage);
   router.get("/urun-belgelendirme/machinery", MachineryPage);
+  router.get("/asansor/ce", AsansorCEPage);
+  router.get("/asansor/2-taraf-denetim", IkinciTarafDenetimPage);
+  router.get("/asansor/periyodik-olmayan-denetim", PeriyodikOlmayanPage);
   router.get(
     "/.well-known/pki-validation/8EF0E148BC848A44E6EAFE8F9FADF56F.txt",
     SslStatus

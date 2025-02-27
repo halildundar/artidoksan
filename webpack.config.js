@@ -29,6 +29,9 @@ export default {
     "public/sistem/iso50001":'./src/public/sistem/iso50001/main.js',
     "public/urun/lift":'./src/public/urun/lift/main.js',
     "public/urun/machinery":'./src/public/urun/machinery/main.js',
+    "public/asansor/ce":'./src/public/asansor/ce/main.js',
+    "public/asansor/2-taraf-denetim":'./src/public/asansor/2-taraf-denetim/main.js',
+    "public/asansor/periyodik-olmayan":'./src/public/asansor/periyodik-olmayan/main.js',
   },
   output: {
     path: resolve(process.cwd(), "dist"),

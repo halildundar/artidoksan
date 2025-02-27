@@ -5,6 +5,7 @@ import "./sources/8EF0E148BC848A44E6EAFE8F9FADF56F.txt";
 import "./views/layouts/main.hbs";
 import "./views/layouts/sistem.hbs";
 import "./views/layouts/urun.hbs";
+import "./views/layouts/asansor.hbs";
 import "./views/partials/header.hbs";
 import "./views/partials/footer.hbs";
 import "./views/partials/sidebar.hbs";
@@ -20,6 +21,9 @@ import "./views/pages/sistem/iso10002.hbs";
 import "./views/pages/sistem/iso50001.hbs";
 import "./views/pages/urun/lift.hbs";
 import "./views/pages/urun/machinery.hbs";
+import "./views/pages/asansor/ce.hbs";
+import "./views/pages/asansor/2-taraf-denetim.hbs";
+import "./views/pages/asansor/periyodik-olmayan.hbs";
 import "./views/pages/404.hbs";
 
 import "./web.config";

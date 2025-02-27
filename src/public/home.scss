@@ -66,7 +66,16 @@ h2 {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: linear-gradient(120deg,#ebebeb 25%,#ebebebbd 50%,transparent,transparent,transparent,transparent,transparent);
+    background-image: linear-gradient(
+      120deg,
+      #ebebeb 25%,
+      #ebebebbd 50%,
+      transparent,
+      transparent,
+      transparent,
+      transparent,
+      transparent
+    );
     z-index: 1;
   }
   .banner-text-wrapper {
@@ -85,85 +94,88 @@ h2 {
       font-size: 1.5rem;
     }
   }
-  
-  
 }
-.homebanner{
-  
+.homebanner {
   .bshow {
     z-index: 20;
-    .bimg1,.btext3,.btn-arti{
+    .bimg1,
+    .btext3,
+    .btn-arti {
       opacity: 1;
-      filter:blur(0);
+      filter: blur(0);
       transition: all 1s;
     }
-    .btext1{
+    .btext1 {
       transform: translateY();
       opacity: 1;
-      filter:blur(0);
+      filter: blur(0);
       transition: all 1s;
     }
-    .btext2{
+    .btext2 {
       transform: translateX(0);
       opacity: 1;
-      filter:blur(0);
+      filter: blur(0);
       transition: all 1s;
     }
   }
   .bhide {
-    .bimg1,.btext3,.btn-arti{
+    .bimg1,
+    .btext3,
+    .btn-arti {
       opacity: 0;
-      filter:blur(10px);
+      filter: blur(10px);
       transition: all 1s;
     }
-    .btext1{
+    .btext1 {
       transform: translateY(-50%);
       opacity: 0;
-      filter:blur(10px);
+      filter: blur(10px);
       transition: all 1s;
     }
-    .btext2{
+    .btext2 {
       transform: translateX(-20%);
       opacity: 0;
-      filter:blur(10px);
+      filter: blur(10px);
       transition: all 1s;
     }
   }
 }
 
-
-.homebanner .btn-wrapper{
+.homebanner .btn-wrapper {
   z-index: 20;
   position: absolute;
   bottom: 0;
   right: 0;
   padding: 10px 0;
   width: 100%;
-  .pn-arrows{
+  .pn-arrows {
     margin-right: 10px;
-    .prev-arrow,.next-arrow{
-      @apply  p-2 cursor-pointer  border border-[--thm-color] hover:bg-white duration-100 bg-white/70 flex items-center justify-center
+    .prev-arrow,
+    .next-arrow {
+      @apply p-2 cursor-pointer  border border-[--thm-color] hover:bg-white duration-100 bg-white/70 flex items-center justify-center;
     }
-    
   }
 }
 
-.cont2-btns{
-  button{
+.cont2-btns {
+  button {
     @apply text-start shadow-sm rounded-l-xl shadow-indigo-900 rounded-r-full bg-[whitesmoke];
   }
   button.active > div {
-    @apply text-white 
-    
+    @apply text-white;
   }
   button.active > span {
-    @apply bg-[orange] text-white 
+    @apply bg-[orange] text-white;
   }
-  button.active{
-    @apply bg-blue-600 rounded-r-full
-    
+  button.active {
+    @apply bg-blue-600 rounded-r-full;
   }
 }
-.cont2-ban{
-
+@media only screen  and (max-width: 600px) {
+  .homebanner .home-banner-slide {
+    .banner-overlay {
+      // background-color: rgba(black, 0.5);
+      background-image: linear-gradient(45deg,#000000bf,#0091ff62,#000000bf,#0091ff62,#000000bf,#0091ff62,#000000bf);
+    }
+  }
 }

@@ -99,13 +99,16 @@
 
     {{> header}}
     <div class="px-5">
-        <div class="max-w-[--max-width] mx-auto text-black py-5">
-            <h1 class="">Sistem Belgelendirme</h1>
+        <div class="max-w-[--max-width] mx-auto text-black py-5 flex items-center ">
+            <div class="sis-menu-btn lg:hidden mr-4">
+                <i class="tio text-[2rem] tioclose">menu_hamburger</i>
+            </div>
+            <h1 class="text-[1.8rem] lg:text-[2.4rem]">Sistem Belgelendirme</h1>
         </div>
 
-        <div class="max-w-[--max-width] mx-auto text-black xl:flex min-h-[500px]  px-5 xl:px-0">
-            <div class="hidden xl:block xl:w-1/4  pr-5  pb-5  xl:pb-10">
-                <div class="sticky top-0 pt-5 pb-5 xl:pr-5 xl:pb-10 rounded-lg bg-[whitesmoke]">
+        <div class="max-w-[--max-width] relative mx-auto text-black lg:flex min-h-[500px]">
+            <div class="sis-menu hidden   absolute top-0 left-0 h-auto w-full z-10 lg:relative xl:block xl:w-1/4  pr-5  pb-5  xl:pb-10">
+                <div class="sticky top-0 pt-5 pb-5 lg:pr-5 lg:pb-10 rounded-lg bg-[whitesmoke]">
                     <ul class="pl-5 ">
                         <li class=" relative  border-b border-gray-300 py-2 pt-6">
                             <a href="/sistem-belgelendirme/iso9001" class="block">
@@ -190,14 +193,13 @@
                     </ul>
                 </div>
             </div>
-            <div class="w-full xl:w-1/2 pb-5 xl:pb-0">
+            <div class="w-full lg:w-1/2 pb-5 lg:pb-0">
                 {{{body}}}
             </div>
-            <div class="w-full xl:w-1/4  ">
+            <div class="w-full lg:w-1/4  ">
                 <div class="sticky top-0 flex flex-col space-y-4 pb-10">
                     <div class="p-4 rounded-lg bg-[whitesmoke] text-center font-semibold frm-area">
                         <h3>Formlar</h3>
-                        
                     </div>
                     <div class="p-4 rounded-lg bg-[whitesmoke] text-center font-semibold pt-10 pb-5">
                         <div class="text-center">Müşteri temsilcilerimizle iletişime geçerek taleplerinizi

@@ -38,10 +38,11 @@ h4, .h4 {
   font-size: 150%;
   font-weight: 500;
   margin-top: 1.4rem;
+  text-align: start;
 }
 
 p{
-  @apply indent-[2.4rem] pb-4;
+  @apply  py-2 ;
 }
 input,textarea{
   outline: none;
