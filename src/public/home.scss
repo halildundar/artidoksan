@@ -51,51 +51,8 @@ h2 {
 
 .homebanner {
   position: relative;
-  min-height: 400px;
-}
-.homebanner .home-banner-slide {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 400px;
+  min-height: 412px;
   display: block;
-  .banner-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: linear-gradient(
-      120deg,
-      #ebebeb 25%,
-      #ebebebbd 50%,
-      transparent,
-      transparent,
-      transparent,
-      transparent,
-      transparent
-    );
-    z-index: 1;
-  }
-  .banner-text-wrapper {
-    position: absolute;
-    top: 0;
-    left: 0%;
-    width: 100%;
-    height: 100%;
-    z-index: 2;
-    color: white;
-    text-align: start;
-    h1 {
-      font-size: 2.5rem;
-    }
-    h2 {
-      font-size: 1.5rem;
-    }
-  }
-}
-.homebanner {
   .bshow {
     z-index: 20;
     .bimg1,
@@ -139,22 +96,64 @@ h2 {
       transition: all 1s;
     }
   }
-}
-
-.homebanner .btn-wrapper {
-  z-index: 20;
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  padding: 10px 0;
-  width: 100%;
-  .pn-arrows {
-    margin-right: 10px;
-    .prev-arrow,
-    .next-arrow {
-      @apply p-2 cursor-pointer  border border-[--thm-color] hover:bg-white duration-100 bg-white/70 flex items-center justify-center;
+  .btn-wrapper {
+    z-index: 20;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 10px 0;
+    width: 100%;
+    .pn-arrows {
+      margin-right: 10px;
+      .prev-arrow,
+      .next-arrow {
+        @apply p-2 cursor-pointer  border border-[--thm-color] hover:bg-white duration-100 bg-white/70 flex items-center justify-center;
+      }
     }
   }
+  .home-banner-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    display: block;
+    .banner-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: linear-gradient(
+        120deg,
+        #ebebeb 25%,
+        #ebebebbd 50%,
+        transparent,
+        transparent,
+        transparent,
+        transparent,
+        transparent
+      );
+      z-index: 1;
+    }
+    .banner-text-wrapper {
+      position: absolute;
+      top: 0;
+      left: 0%;
+      width: 100%;
+      height: 100%;
+      z-index: 2;
+      color: white;
+      text-align: start;
+      h1 {
+        font-size: 2.5rem;
+      }
+      h2 {
+        font-size: 1.5rem;
+      }
+    }
+  }
+  
 }
 
 .cont2-btns {
