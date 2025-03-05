@@ -69,8 +69,6 @@ $(document).ready(function () {
                     if (!$(".spinner-area").hasClass("hidden")) {
                       $(".spinner-area").addClass("hidden");
                     }
-                
-                    // throw Error(error + ":" + thrown);
                   },
                 });
               });
