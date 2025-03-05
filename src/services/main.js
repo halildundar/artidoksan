@@ -21,7 +21,7 @@ import { CtrlPanelRoutes } from "./pages/ctrl-panel/main.js";
 
 let router = express.Router({ mergeParams: true });
 import { SslStatus } from "./ssl.js";
-import {initPassportLocal} from './pages/ctrl-panel/passportCtrl.js';
+import { initPassportLocal } from "./pages/ctrl-panel/passportCtrl.js";
 initPassportLocal();
 export let appRoutes = (app) => {
   router.get("/", HomePage);
@@ -51,6 +51,7 @@ export let appRoutes = (app) => {
   );
   router.get("/sitemap", async (req, res) => {
     const lastmod = new Date(2025, 1, 8, 15, 12, 55).toISOString();
+    const sitename = "https://compassionate-villani.89-250-72-218.plesk.page/";
     const sitemapIcerik = `<?xml version="1.0" encoding="UTF-8" ?>
     <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" 
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
@@ -58,10 +59,52 @@ export let appRoutes = (app) => {
                 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 
         <url>
-            <loc>https://betciksguncel.org</loc>
+            <loc>${sitename}</loc>
             <lastmod>${lastmod}</lastmod>
-            <changefreq>hourly</changefreq>
+            <changefreq>monthly</changefreq>
             <priority>1.0</priority>
+        </url>
+         <url>
+            <loc>${sitename}/hakkimizda</loc>
+            <lastmod>${lastmod}</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>0.9</priority>
+        </url>
+         <url>
+            <loc>${sitename}/sistem-belgelendirme</loc>
+            <lastmod>${lastmod}</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>0.9</priority>
+        </url>
+         <url>
+            <loc>${sitename}/urun-belgelendirme</loc>
+            <lastmod>${lastmod}</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>0.9</priority>
+        </url>
+        <url>
+            <loc>${sitename}/asansor/ce</loc>
+            <lastmod>${lastmod}</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>0.9</priority>
+        </url>
+        <url>
+            <loc>${sitename}/asansor/2-taraf-denetim</loc>
+            <lastmod>${lastmod}</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>0.9</priority>
+        </url>
+         <url>
+            <loc>${sitename}/asansor/periyodik-olmayan-denetim</loc>
+            <lastmod>${lastmod}</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>0.9</priority>
+        </url>
+        <url>
+            <loc>${sitename}/asansor/iletisim</loc>
+            <lastmod>${lastmod}</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>0.9</priority>
         </url>
 
 
