@@ -32,6 +32,7 @@ export default {
     "public/asansor/ce":'./src/public/asansor/ce/main.js',
     "public/asansor/2-taraf-denetim":'./src/public/asansor/2-taraf-denetim/main.js',
     "public/asansor/periyodik-olmayan":'./src/public/asansor/periyodik-olmayan/main.js',
+    "public/ctrl-panel/main":'./src/public/ctrl-panel/main.js',
   },
   output: {
     path: resolve(process.cwd(), "dist"),

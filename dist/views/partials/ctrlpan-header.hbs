@@ -1,0 +1,43 @@
+<header class="bg-[--thm-color]">
+    <div class="max-w-[--max-width] mx-auto py-1 px-5 flex items-center">
+        <a href="">
+            <img src="/assets/logo-w.webp" class="h-[60px] w-auto" alt="">
+        </a>
+        <div class="flex-1"></div>
+        <div class="flex items-center space-x-1 mr-">
+
+        </div>
+        <div class="">
+            {{!-- <div class="hidden items-center space-x-1 ">
+                <a href="/signin/"
+                    class="px-3 py-1 bg-black/10 hover:bg-black/20 duration-300 font-[500] text-white rounded-md">Giriş
+                    Yap</a>
+            </div> --}}
+            <div class="flex items-center space-x-1">
+                {{!-- <div class="flex items-center space-x-1 ">
+                    <a route="/ctrl-panel/"
+                        class="menu-active cursor-pointer px-3 py-1 bg-black/10 hover:bg-black/20 duration-300 font-[500] text-white rounded-md">Dashboard</a>
+                </div>
+                <div class="flex items-center space-x-1 ">
+                    <a href="/ctrl-panel/login"
+                        class="px-3 py-1 cursor-pointer bg-black/10 hover:bg-black/20 duration-300 font-[500] text-white rounded-md">Giriş
+                        Yap</a>
+                </div> --}}
+                <div class="login hidden  items-center space-x-1 ">
+                    <a route="/ctrl-panel/ce-belgeler"
+                        class="px-3 py-1 cursor-pointer bg-black/10 hover:bg-black/20 duration-300 font-[500] text-white rounded-md">CE
+                        Belgeleri</a>
+                </div>
+                {{!-- <div class="flex items-center space-x-1 ">
+                    <a route="/ctrl-panel/ce-s2"
+                        class="px-3 py-1 cursor-pointer bg-black/10 hover:bg-black/20 duration-300 font-[500] text-white rounded-md">404</a>
+                </div> --}}
+                <div class="login hidden  items-center space-x-1 ">
+                    <a id="logoutbtn" 
+                        class="px-3 py-1 cursor-pointer bg-black/10 hover:bg-black/20 duration-300 font-[500] text-white rounded-md">Logout</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</header>

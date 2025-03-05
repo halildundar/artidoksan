@@ -2,7 +2,6 @@ import "./home.scss";
 $(document).ready(function () {
  
 
-  console.log($(".home-banner-slide"));
   let banCurrInd = 0;
   const makeIndexBan = () => {
     $.map($(".home-banner-slide"), function (item, index) {

@@ -9,18 +9,22 @@ $(document).ready(function () {
   // console.log('pathname', window.location.pathname);
   $(".tiopen").click(function (e) {
     e.preventDefault();
-    console.log("Open");
-    $(".sidemenu").css("left", "25vw");
+    if ($(window).width() < 640){
+      $(".sidemenu").css("left", "25vw");
+      $(".sidemenu").css("width", "75vw");
+    }else{
+      $(".sidemenu").css("left", "60vw");
+      $(".sidemenu").css("width", "40vw");
+    }
+    
   });
   $(".tioclose").click(function (e) {
     e.preventDefault();
-    console.log("Close");
     $(".sidemenu").css("left", "100%");
   });
 
   $(".sis-menu-btn").click(function (e) {
     e.preventDefault();
-    console.log("Open");
     if($(".sis-menu").hasClass('hidden')){
         $(".sis-menu").removeClass("hidden");
     }else{
@@ -29,7 +33,6 @@ $(document).ready(function () {
   });
   $(".urun-menu-btn").click(function (e) {
     e.preventDefault();
-    console.log("Open");
     if($(".urun-menu").hasClass('hidden')){
         $(".urun-menu").removeClass("hidden");
     }else{

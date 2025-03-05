@@ -1,16 +1,34 @@
 import express from "express";
-import {HomePage} from './pages/home.js';
+import { HomePage } from "./pages/home.js";
 import { HakkimizdaPage } from "./pages/hakkimizda.js";
-import { ISO9001Page,ISO14001Page,ISO22000Page,ISO27001Page,ISO45001Page,ISO13485Page,ISO10002Page,ISO50001Page } from "./pages/sistem.js";
-import { LiftPage,MachineryPage } from "./pages/urun.js";
-import { AsansorCEPage,IkinciTarafDenetimPage,PeriyodikOlmayanPage } from "./pages/asansor.js";
+import {
+  ISO9001Page,
+  ISO14001Page,
+  ISO22000Page,
+  ISO27001Page,
+  ISO45001Page,
+  ISO13485Page,
+  ISO10002Page,
+  ISO50001Page,
+} from "./pages/sistem.js";
+import { LiftPage, MachineryPage } from "./pages/urun.js";
+import {
+  AsansorCEPage,
+  IkinciTarafDenetimPage,
+  PeriyodikOlmayanPage,
+} from "./pages/asansor.js";
+import { CtrlPanelRoutes } from "./pages/ctrl-panel/main.js";
+
 let router = express.Router({ mergeParams: true });
 import { SslStatus } from "./ssl.js";
-
+import {initPassportLocal} from './pages/ctrl-panel/passportCtrl.js';
+initPassportLocal();
 export let appRoutes = (app) => {
   router.get("/", HomePage);
   router.get("/hakkimizda", HakkimizdaPage);
-  router.get("/sistem-belgelendirme", (req,res)=>res.redirect('/sistem-belgelendirme/iso9001'));
+  router.get("/sistem-belgelendirme", (req, res) =>
+    res.redirect("/sistem-belgelendirme/iso9001")
+  );
   router.get("/sistem-belgelendirme/iso9001", ISO9001Page);
   router.get("/sistem-belgelendirme/iso14001", ISO14001Page);
   router.get("/sistem-belgelendirme/iso22000", ISO22000Page);
@@ -19,7 +37,9 @@ export let appRoutes = (app) => {
   router.get("/sistem-belgelendirme/iso13485", ISO13485Page);
   router.get("/sistem-belgelendirme/iso10002", ISO10002Page);
   router.get("/sistem-belgelendirme/iso50001", ISO50001Page);
-  router.get("/urun-belgelendirme", (req,res)=>res.redirect('/urun-belgelendirme/lift'));
+  router.get("/urun-belgelendirme", (req, res) =>
+    res.redirect("/urun-belgelendirme/lift")
+  );
   router.get("/urun-belgelendirme/lift", LiftPage);
   router.get("/urun-belgelendirme/machinery", MachineryPage);
   router.get("/asansor/ce", AsansorCEPage);
@@ -30,7 +50,7 @@ export let appRoutes = (app) => {
     SslStatus
   );
   router.get("/sitemap", async (req, res) => {
-    const lastmod = new Date(2025,1,8,15,12,55).toISOString();
+    const lastmod = new Date(2025, 1, 8, 15, 12, 55).toISOString();
     const sitemapIcerik = `<?xml version="1.0" encoding="UTF-8" ?>
     <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" 
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
@@ -50,5 +70,7 @@ export let appRoutes = (app) => {
     res.setHeader("content-type", "text/xml");
     res.status(200).send(sitemapIcerik);
   });
+
+  CtrlPanelRoutes("/ctrl-panel", router);
   return app.use("/", router);
 };
