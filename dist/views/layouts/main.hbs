@@ -9,26 +9,27 @@
     <link rel="canonical" href="{{url}}">
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
     <meta name="designer" content="Karahan">
-    <meta name="description"
-        content="{{sitename}} | Ürün ve Sistem Belgelendirme Hizmetleri">
+    <meta name="description" content="{{sitename}} | Ürün ve Sistem Belgelendirme Hizmetleri">
     <meta name="robots" content="index,follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@artidoksancert">
     <meta name="twitter:creator" content="@artidoksancert">
     <meta name="twitter:title" content="{{sitename}} | Asansör CE Belgelendirme Hizmetleri">
-    <meta name="twitter:description"
-        content="{{sitename}} | Ürün ve Sistem Belgelendirme Hizmetleri">
+    <meta name="twitter:description" content="{{sitename}} | Ürün ve Sistem Belgelendirme Hizmetleri">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="tr_TR">
     <meta property="og:url" content="{{url}}">
     <meta property="og:title" content="{{sitename}} | Asansör CE Belgelendirme Hizmetleri">
-    <meta property="og:description"
-        content="{{sitename}} | Ürün ve Sistem Belgelendirme Hizmetleri">
+    <meta property="og:description" content="{{sitename}} | Ürün ve Sistem Belgelendirme Hizmetleri">
     <meta property="og:site_name" content="{{sitename}} | Asansör CE Belgelendirme Hizmetleri">
     <meta property="og:image" content="/assets/thumbnail.webp">
     <meta name="thumbnail" content="/assets/thumbnail.webp">
     <link rel="preload" href="/fonts/The-Icon-of.woff2" as="font" crossorigin="anonymous" />
-    <link rel="preload" href="/fonts/Inter.ttf" as="font" crossorigin="anonymous" />
+    {{!--
+    <link rel="preload" href="/fonts/Inter.ttf" as="font" crossorigin="anonymous" /> --}}
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/main.css">
     <link rel="stylesheet" href="/{{publicdata}}.css">
     <script type="application/ld+json">
@@ -81,11 +82,13 @@
      }
  </script>
 </head>
-<body >
+
+<body>
     {{{body}}}
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"
         integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <script src="/main.js"></script>
     <script src="{{publicdata}}.js"></script>
 </body>
+
 </html>
