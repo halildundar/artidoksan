@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 @import "./util/spinner.scss";
-// @import "./util/icons.scss";
+@import "./util/icons.scss";
 * {
   box-sizing: border-box;
 }

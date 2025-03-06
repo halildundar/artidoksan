@@ -35,7 +35,6 @@ import "./public/ctrl-panel/templates/ce-belgeler.hbs";
 import "./public/ctrl-panel/templates/dashboard.hbs";
 import "./public/ctrl-panel/templates/404.hbs";
 import "./public/ctrl-panel/templates/login.hbs";
-import "./public/fonts/The-Icon-of.woff2"
 import "./web.config";
 import './const.env';
 import "./public/assets/thumbnail.webp";
