@@ -3,7 +3,6 @@
 @tailwind utilities;
 @import "./util/spinner.scss";
 @import "./util/icons.scss";
-// @import "./util/fonts.scss";
 * {
   box-sizing: border-box;
 }
@@ -13,8 +12,11 @@ body {
   --thm-color: #0287e5;
   --thm-color-dark: #005fa3;
   --bg-color: #ebebeb;
-  font-family: "Inter", "arial";
+  font-family: "Inter", sans-serif, "arial";
+  font-optical-sizing: auto;
   font-size: 16px;
+  font-weight: 500;
+  font-style: normal;
   margin: 0;
   background-color: #ebebeb;
   color: white;
