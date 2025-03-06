@@ -1,51 +1,44 @@
 import MiniCssExtractPlugin from "mini-css-extract-plugin";
 import WebpackShellPluginNext from "webpack-shell-plugin-next";
 import { glob } from "glob";
-import { resolve,dirname } from "node:path";
+import { resolve, dirname } from "node:path";
 import TerserPlugin from "terser-webpack-plugin";
 import nodeExternals from "webpack-node-externals";
 import { config } from "dotenv";
-config({path:"./src/const.env"});
+config({ path: "./src/const.env" });
 console.log(process.env.NODE_ENV);
-
 
 export default {
   // mode: "development",
-  mode:process.env.NODE_ENV,
-  devtool: "eval-source-map",//eval
-  entry: {  
-    "server":'./src/server.js',
-    "viewchanges":'./src/viewschanges.js',
-    "public/home":'./src/public/home.js',
-    "public/main":'./src/public/main.js',
-    "public/hakkimizda":'./src/public/hakkimizda.js',
-    "public/sistem/iso9001":'./src/public/sistem/iso9001/main.js',
-    "public/sistem/iso14001":'./src/public/sistem/iso14001/main.js',
-    "public/sistem/iso22000":'./src/public/sistem/iso22000/main.js',
-    "public/sistem/iso27001":'./src/public/sistem/iso27001/main.js',
-    "public/sistem/iso45001":'./src/public/sistem/iso45001/main.js',
-    "public/sistem/iso13485":'./src/public/sistem/iso13485/main.js',
-    "public/sistem/iso10002":'./src/public/sistem/iso10002/main.js',
-    "public/sistem/iso50001":'./src/public/sistem/iso50001/main.js',
-    "public/urun/lift":'./src/public/urun/lift/main.js',
-    "public/urun/machinery":'./src/public/urun/machinery/main.js',
-    "public/asansor/ce":'./src/public/asansor/ce/main.js',
-    "public/asansor/2-taraf-denetim":'./src/public/asansor/2-taraf-denetim/main.js',
-    "public/asansor/periyodik-olmayan":'./src/public/asansor/periyodik-olmayan/main.js',
-    "public/ctrl-panel/main":'./src/public/ctrl-panel/main.js',
+  mode: process.env.NODE_ENV,
+  // devtool: "eval-source-map", //eval
+  entry: {
+    server: "./src/server.js",
+    viewchanges: "./src/viewschanges.js",
+    "public/home": "./src/public/home.js",
+    "public/main": "./src/public/main.js",
+    "public/hakkimizda": "./src/public/hakkimizda.js",
+    "public/sistem/iso9001": "./src/public/sistem/iso9001/main.js",
+    "public/sistem/iso14001": "./src/public/sistem/iso14001/main.js",
+    "public/sistem/iso22000": "./src/public/sistem/iso22000/main.js",
+    "public/sistem/iso27001": "./src/public/sistem/iso27001/main.js",
+    "public/sistem/iso45001": "./src/public/sistem/iso45001/main.js",
+    "public/sistem/iso13485": "./src/public/sistem/iso13485/main.js",
+    "public/sistem/iso10002": "./src/public/sistem/iso10002/main.js",
+    "public/sistem/iso50001": "./src/public/sistem/iso50001/main.js",
+    "public/urun/lift": "./src/public/urun/lift/main.js",
+    "public/urun/machinery": "./src/public/urun/machinery/main.js",
+    "public/asansor/ce": "./src/public/asansor/ce/main.js",
+    "public/asansor/2-taraf-denetim":
+      "./src/public/asansor/2-taraf-denetim/main.js",
+    "public/asansor/periyodik-olmayan":
+      "./src/public/asansor/periyodik-olmayan/main.js",
+    "public/ctrl-panel/main": "./src/public/ctrl-panel/main.js",
   },
   output: {
     path: resolve(process.cwd(), "dist"),
-    // clean: process.env.NODE_ENV == 'production',
     clean: true,
-    // publicPath: '/',
-    // assetModuleFilename: (pathData) => {
-    //   const filepath = dirname(pathData.filename)
-    //     .split("/")
-    //     .slice(1)
-    //     .join("/");
-    //   return `${filepath}/[name][ext]`;
-    // },
+ 
   },
   module: {
     rules: [
@@ -62,19 +55,19 @@ export default {
             loader: MiniCssExtractPlugin.loader,
             // options: { reloadAll: true },
           },
-          'css-loader',
+          "css-loader",
           "postcss-loader",
           "sass-loader",
         ],
       },
       {
         test: /\.(png|jp?eg|webp|gif|woff2|ttf|otf|woff|eot|svg)$/i,
-        type: 'asset/resource',
+        type: "asset/resource",
         generator: {
-          outputPath: 'public/',
-          publicPath: '//',
+          outputPath: "public/",
+          publicPath: "//",
           // filename:"[name][ext][query]",
-          filename:(name) => {
+          filename: (name) => {
             /**
              * @description Remove first & last item from ${path} array.
              * @example
@@ -83,12 +76,12 @@ export default {
              */
             const path = name.filename.split("/").slice(2, -1).join("/");
             return `${path}/[name][ext]`;
+          },
         },
-        }
       },
       {
         test: /\.(hbs|ico|txt|docx|ps1|config|json|env)$/,
-        type: 'javascript/auto',
+        type: "javascript/auto",
         use: [
           {
             loader: "file-loader",
@@ -103,13 +96,13 @@ export default {
       },
     ],
   },
-  
+
   optimization: {
     minimize: true,
     minimizer: [
       new TerserPlugin({
         extractComments: "all",
-        extractComments: false,
+        extractComments: true,
         minify: TerserPlugin.uglifyJsMinify,
         terserOptions: {
           ecma: import("terser").ECMA | undefined,
@@ -125,7 +118,6 @@ export default {
       filename: "[name].css",
     }),
     new WebpackShellPluginNext({
-     
       onAfterDone: {
         scripts: ["node copyFolder.js"],
         blocking: false,
