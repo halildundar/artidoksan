@@ -11,7 +11,7 @@ console.log(process.env.NODE_ENV);
 export default {
   // mode: "development",
   mode: process.env.NODE_ENV,
-  // devtool: "eval-source-map", //eval
+  devtool: process.env.NODE_ENV == 'development' ? "eval-source-map":false, //eval
   entry: {
     server: "./src/server.js",
     viewchanges: "./src/viewschanges.js",
