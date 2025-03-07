@@ -60,6 +60,7 @@ export default {
           "sass-loader",
         ],
       },
+    
       {
         test: /\.(png|jp?eg|webp|gif|woff2|ttf|otf|woff|eot|svg)$/i,
         type: "asset/resource",
@@ -74,8 +75,9 @@ export default {
              *      Orginal Path: 'src/images/avatar/image.jpg'
              *      Changed To: 'images/avatar'
              */
-            const path = name.filename.split("/").slice(2, -1).join("/");
-            return `${path}/[name][ext]`;
+            console.log(name.filename);
+            console.log(name.filename.split("/").slice(2).join("/"));
+            return name.filename.split("/").slice(2).join("/");
           },
         },
       },
