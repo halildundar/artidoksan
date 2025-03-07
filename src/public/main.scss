@@ -1,7 +1,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import "./util.scss";
+@import "./util/icons.scss";
+@import "./util/spinner.scss";
 * {
   box-sizing: border-box;
 }
