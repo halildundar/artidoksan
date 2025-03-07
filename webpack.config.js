@@ -11,7 +11,7 @@ console.log(process.env.NODE_ENV);
 export default {
   // mode: "development",
   mode: process.env.NODE_ENV,
-  devtool: process.env.NODE_ENV == 'development' ? "eval-source-map":false, //eval
+  devtool: process.env.NODE_ENV == "development" ? "eval-source-map" : false, //eval
   entry: {
     server: "./src/server.js",
     viewchanges: "./src/viewschanges.js",
@@ -38,7 +38,6 @@ export default {
   output: {
     path: resolve(process.cwd(), "dist"),
     clean: true,
- 
   },
   module: {
     rules: [
@@ -51,6 +50,7 @@ export default {
         test: /.(scss|css)$/,
         exclude: /node_modules/,
         use: [
+          
           {
             loader: MiniCssExtractPlugin.loader,
             // options: { reloadAll: true },
@@ -60,7 +60,7 @@ export default {
           "sass-loader",
         ],
       },
-    
+
       {
         test: /\.(png|jp?eg|webp|gif|woff2|ttf|otf|woff|eot|svg)$/i,
         type: "asset/resource",
@@ -75,8 +75,8 @@ export default {
              *      Orginal Path: 'src/images/avatar/image.jpg'
              *      Changed To: 'images/avatar'
              */
-            console.log(name.filename);
-            console.log(name.filename.split("/").slice(2).join("/"));
+            // console.log(name.filename);
+            // console.log(name.filename.split("/").slice(2).join("/"));
             return name.filename.split("/").slice(2).join("/");
           },
         },
@@ -117,7 +117,7 @@ export default {
   },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: "[name].css",
+      filename: "[name].css"
     }),
     new WebpackShellPluginNext({
       onAfterDone: {
