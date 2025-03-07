@@ -51,7 +51,7 @@ h2 {
 
 .homebanner {
   position: relative;
-  height: 412px;
+  height: 400px;
   display: block;
   .bshow {
     z-index: 20;
@@ -124,10 +124,12 @@ h2 {
       left: 0;
       width: 100%;
       height: 100%;
+      // #ebebeb 25%,
+      // #ebebebbd 50%,
       background-image: linear-gradient(
         120deg,
-        #ebebeb 25%,
-        #ebebebbd 50%,
+        #ebebebce 25%,
+        #ebebeb5b 50%,
         transparent,
         transparent,
         transparent,
@@ -173,8 +175,8 @@ h2 {
 @media only screen  and (max-width: 600px) {
   .homebanner .home-banner-slide {
     .banner-overlay {
-      // background-color: rgba(black, 0.5);
-      background-image: linear-gradient(45deg,#000000bf,#0091ff62,#000000bf,#0091ff62,#000000bf,#0091ff62,#000000bf);
+      background-color: rgba(black, 0.5);
+      background-image: linear-gradient(transparent,transparent);
     }
   }
 }
