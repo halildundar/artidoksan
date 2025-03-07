@@ -1,7 +1,7 @@
 
 import "./main.scss";
-import "./util/icons.scss";
-import "./util/spinner.scss";
+// import "./util/icons.scss";
+// import "./util/spinner.scss";
 // import { Tooltip, Toast, Popover } from 'bootstrap'
 import "./assets/giris-adres-sm.webp";
 $(document).ready(function () {
