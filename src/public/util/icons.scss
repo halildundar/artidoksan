@@ -12,6 +12,9 @@
   font-display: block;
 }
 .tio {
+  .more_vertical:before {
+    content: "\ed4a";
+  }
   .call:before {
     content: "\ea13";
   }
