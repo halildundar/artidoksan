@@ -59,7 +59,7 @@ $(document).ready(function () {
     $(this).addClass("active");
     $(".modulGBtn").removeClass("active");
     $(".modulEBtn").removeClass("active");
-    $(".modulBtn").removeClass("active");
+    $(".modulBBtn").removeClass("active");
     $(".modulH1Cls").css("z-index","1");
     $(".modulECls").css("z-index","0");
     $(".modulGCls").css("z-index","0");
