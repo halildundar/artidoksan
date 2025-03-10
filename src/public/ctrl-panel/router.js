@@ -10,14 +10,14 @@ const Routes = new Router("myFirstRouter", [
   {
     path: "/ctrl-panel/",
     viewId: "#root_view",
-    template: "dashboard.hbs",
+    template: "dashboard.html",
     name: "Ctrl Panel Anasayfa",
     data: {},
   },
   {
     path: "/ctrl-panel/ce-belgeler",
     viewId: "#root_view",
-    template: "ce-belgeler.hbs",
+    template: "ce-belgeler.html",
     name: "CE Belgeleri",
     data: {
       name: "Yeni Bilgi",
@@ -26,7 +26,7 @@ const Routes = new Router("myFirstRouter", [
   {
     path: "/ctrl-panel/login",
     viewId: "#root_view",
-    template: "login.hbs",
+    template: "login.html",
     name: "Giriş Yap",
     data: {
       name: "Yeni Bilgi",
@@ -44,7 +44,7 @@ const IsAuthGet = (routePath)=>{
     dataType: "json",
     success: function (response) {
       console.log("response",response);
-      if (!!response) {
+      if (!response) {
         User = response;
         if (!!route) {
           GoToPage(route.path, route.viewId, route.data);

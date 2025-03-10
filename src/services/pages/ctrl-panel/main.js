@@ -3,7 +3,6 @@ import { Recaptha } from "./recaptchaCtrl.js";
 import { Authenticate } from "./passportCtrl.js";
 
 
-
 export let CtrlPanelRoutes = (root, router) => {
   router.post(`${root}/logout`, postLogOut);
   router.post(`${root}/login`, Recaptha, Authenticate);
@@ -19,7 +18,7 @@ export let CtrlPanelRoutes = (root, router) => {
       layout: "ctrl-panel",
     });
   });
-  router.get(`${root}/*`, checkLoggedIn, async (req, res) => {
+  router.get(`${root}/*`,checkLoggedIn,  async (req, res) => {
     res.render("pages/ctrl-panel/main.hbs", {
       sitename: "Ctrlpanel | Artıdoksan",
       page: "Ctrlpanel | Artıdoksan",
@@ -33,3 +32,4 @@ export let CtrlPanelRoutes = (root, router) => {
   // router.get("/register", RegisterPage);
   // router.post("/register", Recaptha, validateRegister, CreateNewUser);
 };
+

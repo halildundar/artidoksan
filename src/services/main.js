@@ -17,7 +17,7 @@ import {
   IkinciTarafDenetimPage,
   PeriyodikOlmayanPage,
 } from "./pages/asansor.js";
-import { CtrlPanelRoutes } from "./pages/ctrl-panel/main.js";
+import { CtrlPanelApp, CtrlPanelRoutes } from "./pages/ctrl-panel/main.js";
 
 let router = express.Router({ mergeParams: true });
 import { SslStatus } from "./ssl.js";
@@ -107,7 +107,6 @@ export let appRoutes = (app) => {
     res.setHeader("content-type", "text/xml");
     res.status(200).send(sitemapIcerik);
   });
-
   CtrlPanelRoutes("/ctrl-panel", router);
   return app.use("/", router);
 };

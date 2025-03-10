@@ -82,7 +82,7 @@ export default {
         },
       },
       {
-        test: /\.(hbs|ico|txt|docx|ps1|config|json|env)$/,
+        test: /\.(html|hbs|ico|txt|docx|ps1|config|json|env)$/,
         type: "javascript/auto",
         use: [
           {
