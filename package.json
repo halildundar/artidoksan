@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "main": "server.js",
   "scripts": {
+    "git-run":"git add . & git commit -m 'lsa' & git push origin main -u",
     "test": "echo \"Error: no test specified\" && exit 1",
     "serve": "concurrently \"webpack -w\" \"npm run serve --prefix dist\"",
     "build": "webpack",
