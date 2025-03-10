@@ -51,7 +51,7 @@ export let appRoutes = (app) => {
   );
   router.get("/sitemap", async (req, res) => {
     const lastmod = new Date(2025, 1, 8, 15, 12, 55).toISOString();
-    const sitename = "https://compassionate-villani.89-250-72-218.plesk.page/";
+    const sitename = "https://artidoksancert.com"//"https://compassionate-villani.89-250-72-218.plesk.page/";
     const sitemapIcerik = `<?xml version="1.0" encoding="UTF-8" ?>
     <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" 
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
@@ -100,13 +100,7 @@ export let appRoutes = (app) => {
             <changefreq>monthly</changefreq>
             <priority>0.9</priority>
         </url>
-        <url>
-            <loc>${sitename}/asansor/iletisim</loc>
-            <lastmod>${lastmod}</lastmod>
-            <changefreq>monthly</changefreq>
-            <priority>0.9</priority>
-        </url>
-
+       
 
     </urlset>`;
     // res.set("Content-Type", "text/xml; charset=utf-8");//'application/xml'
