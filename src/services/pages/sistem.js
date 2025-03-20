@@ -81,6 +81,7 @@ export const ISO50001Page = (req,res)=>{
         sitename:'Artıdoksan',
         page:'Sistem Belgelendirme',
         title:'Sistem Belgelendirme | ISO 50001 Enerji Yönetim Sistemi',
+        origin:`https://artidoksancert.com`,
         url:`https://artidoksancert.com/sistem-belgelendirme/iso50001`,
         siteurl:`https://artidoksancert.com/sistem-belgelendirme/iso50001`,
         publicdata:'/sistem/iso50001',
