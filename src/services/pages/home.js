@@ -5,6 +5,6 @@ export const HomePage = (req,res)=>{
         title:'HomePage',
         url:`https://artidoksancert.com`,
         siteurl:`https://artidoksancert.com`,
-        publicdata:'home'
+        publicdata:'/home'
     })
 }
