@@ -4,7 +4,6 @@ export const AsansorCEPage = (req, res) => {
       sitename: "Artıdoksan",
       page: "Asansör CE",
       title: "Asansör CE Page",
-      origin:`https://artidoksancert.com`,
       url: `https://artidoksancert.com/asansor/ce`,
       siteurl: `https://artidoksancert.com/asansor/ce`,
       publicdata: "/asansor/ce",

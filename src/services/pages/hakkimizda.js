@@ -3,7 +3,6 @@ export const HakkimizdaPage = (req,res)=>{
         sitename:'Artıdoksan',
         page:'Hakkımızda',
         title:'HakkımızdaPage',
-        origin:`https://artidoksancert.com`,
         url:`https://artidoksancert.com/hakkimizda`,
         siteurl:`https://artidoksancert.com/hakkimizda`,
         publicdata:'/hakkimizda'
